@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SaveBlock1 &mdash; Pokémon Sapphire Reversed  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Getting Started" href="getting-started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Pokémon Sapphire Reversed
+          </a>
+              <div class="version">
+                AGB-AXPJ-JPN
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">SaveBlock1</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#struct-saveblock1"><code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">SaveBlock1</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gsaveblock1"><code class="docutils literal notranslate"><span class="pre">gSaveBlock1</span></code></a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Pokémon Sapphire Reversed</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">SaveBlock1</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/saveblock1.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="saveblock1">
+<h1>SaveBlock1<a class="headerlink" href="#saveblock1" title="Link to this heading"></a></h1>
+<section id="struct-saveblock1">
+<h2><a class="reference external" href="https://github.com/pret/pokeruby/blob/master/include/global.h#L667"><code class="docutils literal notranslate"><span class="pre">struct</span> <span class="pre">SaveBlock1</span></code></a><a class="headerlink" href="#struct-saveblock1" title="Link to this heading"></a></h2>
+<p>This structure describes the first WRAM of the cartrige.</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">struct</span><span class="w"> </span><span class="nc">SaveBlock1</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="cm">/*0x00*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Coords16</span><span class="w"> </span><span class="n">pos</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x04*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">WarpData</span><span class="w"> </span><span class="n">location</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x0C*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">WarpData</span><span class="w"> </span><span class="n">warp1</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x14*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">WarpData</span><span class="w"> </span><span class="n">dynamicWarp</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x1C*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">WarpData</span><span class="w"> </span><span class="n">lastHealLocation</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x24*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">WarpData</span><span class="w"> </span><span class="n">warp4</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2C*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">savedMusic</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2E*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">weather</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2F*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">weatherCycleStage</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x30*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">flashLevel</span><span class="p">;</span><span class="w">  </span><span class="c1">// flash level on current map, 0 being normal and 4 being the darkest</span>
+<span class="w">    </span><span class="cm">/*0x32*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">mapLayoutId</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x34*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">mapView</span><span class="p">[</span><span class="mh">0x100</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x234*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">playerPartyCount</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x238*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Pokemon</span><span class="w"> </span><span class="n">playerParty</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x490*/</span><span class="w"> </span><span class="n">u32</span><span class="w"> </span><span class="n">money</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x494*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">coins</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x496*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">registeredItem</span><span class="p">;</span><span class="w"> </span><span class="c1">// registered for use with SELECT button</span>
+<span class="w">    </span><span class="cm">/*0x498*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ItemSlot</span><span class="w"> </span><span class="n">pcItems</span><span class="p">[</span><span class="n">PC_ITEMS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x560*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ItemSlot</span><span class="w"> </span><span class="n">bagPocket_Items</span><span class="p">[</span><span class="n">BAG_ITEMS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x5B0*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ItemSlot</span><span class="w"> </span><span class="n">bagPocket_KeyItems</span><span class="p">[</span><span class="n">BAG_KEYITEMS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x600*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ItemSlot</span><span class="w"> </span><span class="n">bagPocket_PokeBalls</span><span class="p">[</span><span class="n">BAG_POKEBALLS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x640*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ItemSlot</span><span class="w"> </span><span class="n">bagPocket_TMHM</span><span class="p">[</span><span class="n">BAG_TMHM_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x740*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ItemSlot</span><span class="w"> </span><span class="n">bagPocket_Berries</span><span class="p">[</span><span class="n">BAG_BERRIES_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x7F8*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Pokeblock</span><span class="w"> </span><span class="n">pokeblocks</span><span class="p">[</span><span class="n">POKEBLOCKS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x938*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">dexSeen2</span><span class="p">[</span><span class="n">DEX_FLAGS_NO</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x96C*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">berryBlenderRecords</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x972*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">filler_972</span><span class="p">[</span><span class="mh">0x6</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x978*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">trainerRematchStepCounter</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x97A*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">trainerRematches</span><span class="p">[</span><span class="n">MAX_REMATCH_ENTRIES</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x9E0*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ObjectEvent</span><span class="w"> </span><span class="n">objectEvents</span><span class="p">[</span><span class="n">OBJECT_EVENTS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0xC20*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ObjectEventTemplate</span><span class="w"> </span><span class="n">objectEventTemplates</span><span class="p">[</span><span class="n">OBJECT_EVENT_TEMPLATES_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x1220*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">flags</span><span class="p">[</span><span class="n">FLAGS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x1340*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">vars</span><span class="p">[</span><span class="n">VARS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x1540*/</span><span class="w"> </span><span class="n">u32</span><span class="w"> </span><span class="n">gameStats</span><span class="p">[</span><span class="n">NUM_GAME_STATS</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x1608*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">BerryTree</span><span class="w"> </span><span class="n">berryTrees</span><span class="p">[</span><span class="n">BERRY_TREES_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x1A08*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">SecretBaseRecord</span><span class="w"> </span><span class="n">secretBases</span><span class="p">[</span><span class="n">SECRET_BASES_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2688*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">playerRoomDecor</span><span class="p">[</span><span class="n">DECOR_MAX_PLAYERS_HOUSE</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2694*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">playerRoomDecorPos</span><span class="p">[</span><span class="n">DECOR_MAX_PLAYERS_HOUSE</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x26A0*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">decorDesk</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x26AA*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">decorChair</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x26B4*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">decorPlant</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x26BE*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">decorOrnament</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x26DC*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">decorMat</span><span class="p">[</span><span class="mi">30</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x26FA*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">decorPoster</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2704*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">decorDoll</span><span class="p">[</span><span class="mi">40</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x272C*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">decorCushion</span><span class="p">[</span><span class="mi">10</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2736*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">padding_2736</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2738*/</span><span class="w"> </span><span class="n">TVShow</span><span class="w"> </span><span class="n">tvShows</span><span class="p">[</span><span class="n">TV_SHOWS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2ABC*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">PokeNews</span><span class="w"> </span><span class="n">pokeNews</span><span class="p">[</span><span class="n">POKE_NEWS_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2AFC*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">outbreakPokemonSpecies</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2AFE*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">outbreakLocationMapNum</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2AFF*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">outbreakLocationMapGroup</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2B00*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">outbreakPokemonLevel</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2B01*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">outbreakUnk1</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2B02*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">outbreakUnk2</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2B04*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">outbreakPokemonMoves</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2B0C*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">outbreakUnk4</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2B0D*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">outbreakPokemonProbability</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2B0E*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">outbreakUnk5</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2B10*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">GabbyAndTyData</span><span class="w"> </span><span class="n">gabbyAndTyData</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2B1C*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="cm">/*0x2B1C*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">unk2B1C</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<span class="w">        </span><span class="cm">/*0x2B28*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">unk2B28</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<span class="w">        </span><span class="cm">/*0x2B34*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">unk2B34</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<span class="w">        </span><span class="cm">/*0x2B40*/</span><span class="w"> </span><span class="n">u16</span><span class="w"> </span><span class="n">unk2B40</span><span class="p">[</span><span class="mi">6</span><span class="p">];</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="n">easyChats</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2B4C*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">MailStruct</span><span class="w"> </span><span class="n">mail</span><span class="p">[</span><span class="n">MAIL_COUNT</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2D8C*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">unk2D8C</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span><span class="w">  </span><span class="c1">// What is this? Apparently it&#39;s supposed to be 64 bytes in size.</span>
+<span class="w">    </span><span class="cm">/*0x2D90*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">filler_2D90</span><span class="p">[</span><span class="mh">0x4</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2D94*/</span><span class="w"> </span><span class="k">union</span><span class="w"> </span><span class="nc">MauvilleMan</span><span class="w"> </span><span class="n">mauvilleMan</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x2DD4*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">EasyChatPair</span><span class="w"> </span><span class="n">easyChatPairs</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="w"> </span><span class="c1">//Dewford trend [0] and some other stuff</span>
+<span class="w">    </span><span class="cm">/*0x2DFC*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ContestWinner</span><span class="w"> </span><span class="n">contestWinners</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2EFC*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ContestWinner</span><span class="w"> </span><span class="n">museumPortraits</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x2F9C*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">DayCare</span><span class="w"> </span><span class="n">daycare</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x30B8*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">LinkBattleRecord</span><span class="w"> </span><span class="n">linkBattleRecords</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x3108*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">filler_3108</span><span class="p">[</span><span class="mi">8</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x3110*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">giftRibbons</span><span class="p">[</span><span class="mi">11</span><span class="p">];</span>
+<span class="w">    </span><span class="cm">/*0x311B*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ExternalEventData</span><span class="w"> </span><span class="n">externalEventData</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x312F*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">ExternalEventFlags</span><span class="w"> </span><span class="n">externalEventFlags</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x3144*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">Roamer</span><span class="w"> </span><span class="n">roamer</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x3160*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">EnigmaBerry</span><span class="w"> </span><span class="n">enigmaBerry</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x3690*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">RamScript</span><span class="w"> </span><span class="n">ramScript</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x3A7C*/</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">RecordMixingGift</span><span class="w"> </span><span class="n">recordMixingGift</span><span class="p">;</span>
+<span class="w">    </span><span class="cm">/*0x3A8C*/</span><span class="w"> </span><span class="n">u8</span><span class="w"> </span><span class="n">dexSeen3</span><span class="p">[</span><span class="n">DEX_FLAGS_NO</span><span class="p">];</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</section>
+<section id="gsaveblock1">
+<h2><code class="docutils literal notranslate"><span class="pre">gSaveBlock1</span></code><a class="headerlink" href="#gsaveblock1" title="Link to this heading"></a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-text">0x02025494</span><a class="headerlink" href="#id1" title="Link to this code"></a></div>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="k">extern</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">SaveBlock1</span><span class="w"> </span><span class="n">gSaveBlock1</span><span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting-started.html" class="btn btn-neutral float-left" title="Getting Started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Decamark.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

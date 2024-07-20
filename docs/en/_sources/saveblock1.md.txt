@@ -1,0 +1,101 @@
+# SaveBlock1
+
+## [`struct SaveBlock1`](https://github.com/pret/pokeruby/blob/master/include/global.h#L667)
+This structure describes the first WRAM of the cartrige.
+
+```c
+struct SaveBlock1
+{
+    /*0x00*/ struct Coords16 pos;
+    /*0x04*/ struct WarpData location;
+    /*0x0C*/ struct WarpData warp1;
+    /*0x14*/ struct WarpData dynamicWarp;
+    /*0x1C*/ struct WarpData lastHealLocation;
+    /*0x24*/ struct WarpData warp4;
+    /*0x2C*/ u16 savedMusic;
+    /*0x2E*/ u8 weather;
+    /*0x2F*/ u8 weatherCycleStage;
+    /*0x30*/ u8 flashLevel;  // flash level on current map, 0 being normal and 4 being the darkest
+    /*0x32*/ u16 mapLayoutId;
+    /*0x34*/ u16 mapView[0x100];
+    /*0x234*/ u8 playerPartyCount;
+    /*0x238*/ struct Pokemon playerParty[6];
+    /*0x490*/ u32 money;
+    /*0x494*/ u16 coins;
+    /*0x496*/ u16 registeredItem; // registered for use with SELECT button
+    /*0x498*/ struct ItemSlot pcItems[PC_ITEMS_COUNT];
+    /*0x560*/ struct ItemSlot bagPocket_Items[BAG_ITEMS_COUNT];
+    /*0x5B0*/ struct ItemSlot bagPocket_KeyItems[BAG_KEYITEMS_COUNT];
+    /*0x600*/ struct ItemSlot bagPocket_PokeBalls[BAG_POKEBALLS_COUNT];
+    /*0x640*/ struct ItemSlot bagPocket_TMHM[BAG_TMHM_COUNT];
+    /*0x740*/ struct ItemSlot bagPocket_Berries[BAG_BERRIES_COUNT];
+    /*0x7F8*/ struct Pokeblock pokeblocks[POKEBLOCKS_COUNT];
+    /*0x938*/ u8 dexSeen2[DEX_FLAGS_NO];
+    /*0x96C*/ u16 berryBlenderRecords[3];
+    /*0x972*/ u8 filler_972[0x6];
+    /*0x978*/ u16 trainerRematchStepCounter;
+    /*0x97A*/ u8 trainerRematches[MAX_REMATCH_ENTRIES];
+    /*0x9E0*/ struct ObjectEvent objectEvents[OBJECT_EVENTS_COUNT];
+    /*0xC20*/ struct ObjectEventTemplate objectEventTemplates[OBJECT_EVENT_TEMPLATES_COUNT];
+    /*0x1220*/ u8 flags[FLAGS_COUNT];
+    /*0x1340*/ u16 vars[VARS_COUNT];
+    /*0x1540*/ u32 gameStats[NUM_GAME_STATS];
+    /*0x1608*/ struct BerryTree berryTrees[BERRY_TREES_COUNT];
+    /*0x1A08*/ struct SecretBaseRecord secretBases[SECRET_BASES_COUNT];
+    /*0x2688*/ u8 playerRoomDecor[DECOR_MAX_PLAYERS_HOUSE];
+    /*0x2694*/ u8 playerRoomDecorPos[DECOR_MAX_PLAYERS_HOUSE];
+    /*0x26A0*/ u8 decorDesk[10];
+    /*0x26AA*/ u8 decorChair[10];
+    /*0x26B4*/ u8 decorPlant[10];
+    /*0x26BE*/ u8 decorOrnament[30];
+    /*0x26DC*/ u8 decorMat[30];
+    /*0x26FA*/ u8 decorPoster[10];
+    /*0x2704*/ u8 decorDoll[40];
+    /*0x272C*/ u8 decorCushion[10];
+    /*0x2736*/ u8 padding_2736[2];
+    /*0x2738*/ TVShow tvShows[TV_SHOWS_COUNT];
+    /*0x2ABC*/ struct PokeNews pokeNews[POKE_NEWS_COUNT];
+    /*0x2AFC*/ u16 outbreakPokemonSpecies;
+    /*0x2AFE*/ u8 outbreakLocationMapNum;
+    /*0x2AFF*/ u8 outbreakLocationMapGroup;
+    /*0x2B00*/ u8 outbreakPokemonLevel;
+    /*0x2B01*/ u8 outbreakUnk1;
+    /*0x2B02*/ u16 outbreakUnk2;
+    /*0x2B04*/ u16 outbreakPokemonMoves[4];
+    /*0x2B0C*/ u8 outbreakUnk4;
+    /*0x2B0D*/ u8 outbreakPokemonProbability;
+    /*0x2B0E*/ u16 outbreakUnk5;
+    /*0x2B10*/ struct GabbyAndTyData gabbyAndTyData;
+    /*0x2B1C*/ struct {
+        /*0x2B1C*/ u16 unk2B1C[6];
+        /*0x2B28*/ u16 unk2B28[6];
+        /*0x2B34*/ u16 unk2B34[6];
+        /*0x2B40*/ u16 unk2B40[6];
+    } easyChats;
+    /*0x2B4C*/ struct MailStruct mail[MAIL_COUNT];
+    /*0x2D8C*/ u8 unk2D8C[4];  // What is this? Apparently it's supposed to be 64 bytes in size.
+    /*0x2D90*/ u8 filler_2D90[0x4];
+    /*0x2D94*/ union MauvilleMan mauvilleMan;
+    /*0x2DD4*/ struct EasyChatPair easyChatPairs[5]; //Dewford trend [0] and some other stuff
+    /*0x2DFC*/ struct ContestWinner contestWinners[8];
+    /*0x2EFC*/ struct ContestWinner museumPortraits[5];
+    /*0x2F9C*/ struct DayCare daycare;
+    /*0x30B8*/ struct LinkBattleRecord linkBattleRecords[5];
+    /*0x3108*/ u8 filler_3108[8];
+    /*0x3110*/ u8 giftRibbons[11];
+    /*0x311B*/ struct ExternalEventData externalEventData;
+    /*0x312F*/ struct ExternalEventFlags externalEventFlags;
+    /*0x3144*/ struct Roamer roamer;
+    /*0x3160*/ struct EnigmaBerry enigmaBerry;
+    /*0x3690*/ struct RamScript ramScript;
+    /*0x3A7C*/ struct RecordMixingGift recordMixingGift;
+    /*0x3A8C*/ u8 dexSeen3[DEX_FLAGS_NO];
+};
+```
+
+## `gSaveBlock1`
+```{code-block} c
+:caption: 0x02025494
+
+extern struct SaveBlock1 gSaveBlock1;
+```

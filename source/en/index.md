@@ -8,7 +8,6 @@
 Reverse engineering efforts on Pokémon Sapphire (Japanese version)
 
 ```{toctree}
-:numbered:
-
 getting-started.md
+saveblock1.md
 ```
