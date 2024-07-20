@@ -93,9 +93,12 @@ struct SaveBlock1
 };
 ```
 
-## `gSaveBlock1`
+## `0x02025494: gSaveBlock1`
 ```{code-block} c
-:caption: 0x02025494
-
 extern struct SaveBlock1 gSaveBlock1;
 ```
+
+| Offset | Address    | Field |
+| ------ | ---------- | ----- |
+| 0x0    | 0x02025494 | pos   |
+| 0x560  | 0x020259f4 | bagPocket_Items |

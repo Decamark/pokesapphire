@@ -1,10 +1,10 @@
 # SaveBlock1
 
 ## [`struct SaveBlock1`](https://github.com/pret/pokeruby/blob/master/include/global.h#L667)
-This structure maps the first WRAM of the cartrige.
+This structure describes the first WRAM of the cartrige.
 
-```cpp
-struct SaveBlock1 /* 0x02025734 */
+```c
+struct SaveBlock1
 {
     /*0x00*/ struct Coords16 pos;
     /*0x04*/ struct WarpData location;
@@ -92,3 +92,12 @@ struct SaveBlock1 /* 0x02025734 */
     /*0x3A8C*/ u8 dexSeen3[DEX_FLAGS_NO];
 };
 ```
+
+## `0x02025494: gSaveBlock1`
+```{code-block} c
+extern struct SaveBlock1 gSaveBlock1;
+```
+
+| Offset | Address    | Field |
+| ------ | ---------- | ----- |
+| 0x0    | 0x02025494 | pos   |
