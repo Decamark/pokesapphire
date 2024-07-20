@@ -10,4 +10,5 @@ Reverse engineering efforts on Pokémon Sapphire (Japanese version)
 ```{toctree}
 getting-started.md
 saveblock1.md
+todo.md
 ```
