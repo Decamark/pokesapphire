@@ -7,6 +7,9 @@
 
 Reverse engineering efforts on Pokémon Sapphire (Japanese version)
 
+* Discord: [Zero Lab](https://discord.gg/cRJVSx8Z)
+* GitHub: [pokesapphire](https://github.com/Decamark/pokesapphire)
+
 ```{toctree}
 getting-started.md
 saveblock1.md
