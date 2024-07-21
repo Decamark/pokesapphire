@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Pokémon Sapphire Reversed'
+project = 'Pokémon Sapphire Technical Analysis'
 version = 'AGB-AXPJ-JPN'
 copyright = '2024, Decamark'
 author = 'Decamark'
